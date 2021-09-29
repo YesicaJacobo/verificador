@@ -43,5 +43,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"YesicaJacobo_verificador" /o:"yesicajacobo" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          MsBuild.exe /t:Rebuild
+          <MsBuild.exe /t:Rebuild>
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
